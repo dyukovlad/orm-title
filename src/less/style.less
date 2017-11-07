@@ -1,0 +1,260 @@
+@clr:#ffffff;
+@clr-y:#ffdd2d;
+@clr-b: #2f2f2f;
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&subset=cyrillic');
+
+@font-face {
+	font-family: 'GothamPro';
+	src: url('../src/fonts/GothamPro.eot');
+	src: local('Gotham Pro'), local('GothamPro'),
+		url('../src/fonts/GothamPro.eot?#iefix') format('embedded-opentype'),
+		url('../src/fonts/GothamPro.woff') format('woff'),
+		url('../src/fonts/GothamPro.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+input::-webkit-input-placeholder{color:@clr;}
+input::-moz-placeholder{color:@clr;}
+input::-moz-placeholder{color:@clr;}
+input::-ms-input-placeholder{color:@clr;}
+
+input,
+a{
+	&:active,
+	&:focus{
+		outline: none;
+	}
+}
+// nav{
+// 	font-family: 'Roboto', sans-serif;
+// }
+
+ul li{
+    list-style: none;
+}
+a,
+a:hover{
+    text-decoration: none;
+}
+
+.btn{
+	padding: 0;
+	max-width: 170px;
+	width: 100%;
+	height: 45px;
+	line-height: 45px;
+	border-radius: 3px;
+	background-color: #ffdd2d;
+	display: inline-block;
+	font-weight: 300;
+	color: #2f2f2f;
+	font-size: 10px;
+	border:1px solid #ffdd2d;	
+	transition: all 0.4s ease 0s;	
+
+	&:hover{
+		background-color: transparent;
+		color: #ffdd2d;
+		border:1px solid #ffdd2d;	
+
+	}
+}
+
+html,
+body{
+	font-family: 'GothamPro';
+	overflow-x: hidden;
+    font-size: 10px;
+    color: @clr;
+    font-weight: 400;
+    width: 100%;
+}
+
+section{
+	width: 100%;
+}
+
+.header{
+	background: url(../src/img/header.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-color: rgba(22, 22, 22, 0.5);
+	background-blend-mode: overlay;
+	min-height: 750px;
+	padding-top: 35px;
+
+    &__logo{
+		color: #ffffff;
+		font-size: 14px;
+		font-weight: 700;
+		text-transform: uppercase;
+		display: block;
+
+		span{
+			display: block;
+			font-weight: 300;
+			letter-spacing: 0.2px;
+			font-size: 10px;
+		}
+    }
+
+    &__menu{
+		margin: 0;
+		padding: 0;
+		margin-top: 10px;
+		display: flex;
+		justify-content: space-between;
+
+		li{
+			list-style: none;
+
+			a{
+				color: #ffffff;
+				font-size: 10px;
+				font-weight: 700;
+				letter-spacing: 1px;
+				transition: all 0.4s ease 0s;
+
+				&:hover {
+					border-bottom: 3px solid #fff;
+				}
+			}
+		}
+    }
+
+    &__phone{
+    	display: block;
+		color: #ffffff;
+		font-size: 14px;
+		font-weight: 700;
+		letter-spacing: 1.4px;
+		line-height: 33px;
+		float: right;
+		&:hover {
+			color: #ffffff
+		}
+    }
+
+    &__title{
+		font-size: 24px;
+		font-weight: 700;
+    }
+
+    &__title-pos{
+    	margin-top: 130px;
+    }
+
+    &__descr{
+		font-size: 22px;
+		font-weight: 300;
+    }
+
+    .red-line{
+    	display: inline-block;
+    	position: relative;
+
+    	strong{
+    		position: relative;
+    		z-index: 99;
+    	}
+
+		span{
+			position: absolute;
+			right: 0;
+			bottom: 0;
+			z-index: 1;
+			display: inline-block;
+			max-width: 210px;
+			width: 100%;
+			height: 11px;
+			background-color: #ef3123;
+		}
+    }
+
+}
+
+
+// форма
+
+.form{
+	margin-top: 40px;
+	display: flex;
+
+// группируем
+	fieldset{
+		position: relative;
+		display: inline-block;
+	}
+
+	.group{
+		margin-right: 20px;
+	}
+
+	label{
+		position: absolute;
+		top:0;
+		left: 20px;
+		transition: all 0.3s;
+		opacity:1;
+		padding:0 5px;
+		transform: translateY(calc(30%));
+		text-transform: uppercase;
+		font-weight: 300;
+		z-index: 1;
+	}
+
+	&__input{
+		position: relative;
+		width: 235px;
+		height: 45px;
+		line-height: 45px;
+		border-radius: 4px;
+		border: 1px solid #ffffff;
+		background: transparent;
+		color: #ffffff;
+		font-size: 10px;
+		font-weight: 300;
+		letter-spacing: 1px;
+		text-align: center;
+		text-transform: uppercase;
+		z-index: 99;
+
+			&:placeholder-shown + label{
+				opacity: 0;
+				left: 30px;
+				transform: translateY(100%);
+			}
+	}
+
+	&__context{
+		margin-top: 10px;
+		font-size: 10px;
+		font-weight: 300;
+		a{
+			color: #ffffff;
+			text-decoration: underline;
+			transition: all 0.4s ease 0s;
+
+			&:hover{
+				color:#ffdd2d;
+			}
+		}
+
+	}
+
+	@media (max-width: 449px) {
+		display: block;
+		text-align: center;
+		.group{
+			margin: 0;
+		}
+		.form__submit{
+			margin: 15px auto;
+			display: block;
+		}
+	}
+
+}
