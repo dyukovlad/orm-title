@@ -86,9 +86,6 @@ section {
   letter-spacing: 0.2px;
   font-size: 10px;
 }
-.header .menu-css {
-  margin-top: 10px;
-}
 .header__menu {
   margin: 0;
   display: -ms-flexbox;
@@ -109,8 +106,10 @@ section {
 .header__menu li a:hover {
   border-bottom: 3px solid #fff;
 }
-.header .phone-css {
-  line-height: 33px;
+@media (min-width: 992px) and (max-width: 1199px) {
+  .header__menu {
+    padding: 0;
+  }
 }
 .header__phone {
   display: block;
@@ -133,6 +132,23 @@ section {
 .header__descr {
   font-size: 22px;
   font-weight: 300;
+}
+.phone-css {
+  line-height: 33px;
+}
+.menu-css {
+  margin-top: 10px;
+}
+.header-case {
+  padding: 35px 0;
+}
+.header-case .header__logo,
+.header-case .header__menu li a,
+.header-case .header__phone {
+  color: #000;
+}
+.header-case .header__menu li a:hover {
+  border-bottom: 3px solid #000;
 }
 .red-line {
   display: inline-block;
@@ -298,12 +314,96 @@ section {
   margin-top: 40px;
   text-transform: uppercase;
 }
+.case {
+  padding-bottom: 80px;
+}
+.case__hr {
+  margin-top: 0;
+  margin-bottom: 45px;
+}
+.case__txt {
+  margin-top: 30px;
+}
+.case__img {
+  position: relative;
+}
+.case__img img {
+  position: absolute;
+  right: 0;
+  z-index: 99;
+}
+.case__block {
+  width: 100%;
+  padding: 80px 60px;
+  border-radius: 2px;
+  background-color: #ffdd2d;
+  margin: 60px 0;
+}
+@media (max-width: 449px) {
+  .case__block {
+    padding: 20px 10px;
+  }
+}
+.case .header__descr {
+  color: #2f2f2f;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+@media (max-width: 449px) {
+  .case .header__descr {
+    font-size: 16px;
+  }
+}
+.case__item {
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 40px;
+}
+.case__item:last-child {
+  margin-bottom: 0;
+}
+.case__ico {
+  margin-right: 30px;
+}
+.case__name {
+  color: #000000;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 20px;
+}
+.case .tranY {
+  transform: translateY(calc(100%));
+}
+@media (max-width: 449px) {
+  .case .tranY {
+    transform: inherit;
+  }
+}
+.case__bord-r {
+  padding-left: 30px;
+  border-left: 3px solid #fd4444;
+}
+.txt {
+  color: #000000;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 30px;
+}
 .footer {
   padding: 20px 0;
   background-color: #222222;
 }
 .footer__css {
   line-height: 20px;
+}
+.footer__menu {
+  padding: 0;
+  padding-right: 40px;
+}
+@media (min-width: 450px) and (max-width: 767px) {
+  .footer__phone {
+    text-align: center;
+  }
 }
 @media (max-width: 449px) {
   .footer__phone {

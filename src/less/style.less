@@ -100,9 +100,6 @@ section{
 			font-size: 10px;
 		}
     }
-	.menu-css{
-		margin-top: 10px;
-	}
     &__menu{
 		margin: 0;
 		// padding: 0;
@@ -124,10 +121,9 @@ section{
 				}
 			}
 		}
-    }
-
-    .phone-css{
-    	line-height: 33px;
+		@media (min-width: 992px) and (max-width: 1199px) {
+			padding: 0;
+		}
     }
 
     &__phone{
@@ -156,6 +152,27 @@ section{
 		font-weight: 300;
     }   
 
+}
+
+.phone-css{
+	line-height: 33px;
+}
+.menu-css{
+	margin-top: 10px;
+}
+.header-case{
+	padding: 35px 0;
+
+	.header__logo,
+	.header__menu li a,
+	.header__phone{
+		color: #000;
+	}
+	.header__menu li a{
+		&:hover{
+			border-bottom: 3px solid #000;
+		}
+	}
 }
 
 .red-line{
@@ -335,6 +352,94 @@ section{
 
 }
 
+//------------------------//
+
+.case{
+	padding-bottom: 80px;
+
+	&__hr{
+		margin-top: 0;
+		margin-bottom: 45px;
+	}
+
+	&__txt{
+		margin-top: 30px;
+	}
+
+	&__img{
+		position: relative;
+
+		img{
+			position: absolute;
+			right: 0;
+			z-index: 99;
+		}
+	}
+
+	&__block{
+		width: 100%;
+		padding: 80px 60px;
+		border-radius: 2px;
+		background-color: #ffdd2d;
+		margin: 60px 0;
+
+			@media (max-width: 449px) {
+				padding: 20px 10px;
+			}
+	}
+
+	.header__descr{
+		color: @clr-b;
+		font-weight: 700;
+		margin-bottom: 40px;
+					@media (max-width: 449px) {
+						font-size: 16px;
+					}
+	}
+
+	&__item{
+		display: flex;
+		margin-bottom: 40px;
+		&:last-child{
+			margin-bottom: 0;
+		}
+	}
+
+	&__ico{
+		margin-right: 30px;
+	}
+
+	&__name{
+		color: #000000;
+		font-size: 16px;
+		font-weight: 300;
+		line-height: 20px;
+	}
+
+	.tranY{
+		transform: translateY(calc(100%));
+
+			@media (max-width: 449px) {
+				transform: inherit;
+			}		
+	}
+
+	&__bord-r{
+		padding-left: 30px;
+		border-left: 3px solid #fd4444;
+	}
+}
+
+.txt{
+	color: #000000;
+	font-size: 16px;
+	font-weight: 300;
+	line-height: 30px;
+}
+
+//------------------------//
+
+
 .footer{
 	padding: 20px 0;
 	background-color: #222222;
@@ -343,10 +448,17 @@ section{
 		line-height: 20px;
 	}
 
+	&__menu{
+		padding: 0;
+		padding-right:40px;
+	}
+
 	&__phone{
+			@media (min-width: 450px) and (max-width: 767px){
+				text-align: center;
+			}
 			@media (max-width: 449px) {
 				text-align: center;
 			}
 	}
-
 }
