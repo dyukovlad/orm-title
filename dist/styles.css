@@ -372,6 +372,11 @@ section {
   font-weight: 300;
   line-height: 20px;
 }
+.case__name span,
+.case li span {
+  color: #fd5f5f;
+  font-weight: 700;
+}
 .case .tranY {
   transform: translateY(calc(100%));
 }
@@ -384,8 +389,69 @@ section {
   padding-left: 30px;
   border-left: 3px solid #fd4444;
 }
+.case__main {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
 .case__main li {
   margin-bottom: 25px;
+}
+.case__main li:before {
+  content: "\2014\0020";
+}
+.case .price-hr {
+  margin-bottom: 30px;
+}
+.case .table > tbody > tr > td,
+.case .table > tbody > tr > th,
+.case .table > tfoot > tr > td,
+.case .table > tfoot > tr > th,
+.case .table > thead > tr > td,
+.case .table > thead > tr > th {
+  border: none;
+  padding: 15px;
+}
+.case .table > tbody > tr > td:first-child,
+.case .table > tbody > tr > th:first-child,
+.case .table > tfoot > tr > td:first-child,
+.case .table > tfoot > tr > th:first-child,
+.case .table > thead > tr > td:first-child,
+.case .table > thead > tr > th:first-child {
+  text-align: left;
+  padding-left: 60px;
+}
+.case__table {
+  margin-top: 55px;
+  width: 100%;
+  padding: 60px 0;
+  border-radius: 2px;
+  background-color: #ffdd2d;
+}
+.case__table tr:first-child {
+  border-bottom: 1px solid #ffffff;
+}
+.case__table tr td {
+  color: #2f2f2f;
+  font-size: 16px;
+  font-weight: 300;
+  text-align: center;
+}
+.case__btn {
+  max-width: 220px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+  border-radius: 4px;
+  background-color: #ffffff;
+  color: #2f2f2f;
+  font-size: 10px;
+  font-weight: 300;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.case__btn:hover {
+  background-color: #2f2f2f;
+  color: #ffdd2d;
+  border: 1px solid transparent;
 }
 .txt {
   color: #000000;

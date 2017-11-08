@@ -415,6 +415,11 @@ section{
 		font-size: 16px;
 		font-weight: 300;
 		line-height: 20px;
+
+		span{
+			color: #fd5f5f;
+			font-weight: 700;
+		}
 	}
 
 	.tranY{
@@ -431,10 +436,70 @@ section{
 	}
 
 	&__main{
+		padding: 0;
+		margin: 0;
+		list-style: none;
+
+
 		li{
 			margin-bottom: 25px;
+			&:before{
+  				content:"\2014\0020";
+
+			}
 		}
 	}
+
+	.price-hr{
+		margin-bottom: 30px;
+	}
+	.table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th{
+		border: none;
+		padding:15px;
+
+		&:first-child{
+			text-align: left;
+			padding-left: 60px;
+		}
+	}
+
+	&__table{
+		margin-top: 55px;
+		width: 100%;
+		padding: 60px 0;
+		border-radius: 2px;
+		background-color: @clr-y;
+
+		tr{
+			&:first-child{
+				border-bottom: 1px solid @clr;
+			}
+			td{
+				color: @clr-b;
+				font-size: 16px;
+				font-weight: 300;
+				text-align: center;	
+			}
+		}
+	}
+
+	&__btn{
+		max-width: 220px;
+		box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+		border-radius: 4px;
+		background-color: #ffffff;
+		color: #2f2f2f;
+		font-size: 10px;
+		font-weight: 300;
+		letter-spacing: 1px;
+		text-transform: uppercase;
+		&:hover{
+			background-color: @clr-b;
+			color: @clr-y;
+    		border: 1px solid transparent;
+		}
+	}
+
 }
 
 .txt{
@@ -443,6 +508,7 @@ section{
 	font-weight: 300;
 	line-height: 30px;
 }
+
 
 //------------------------//
 
