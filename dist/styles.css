@@ -228,6 +228,11 @@ section {
 .first {
   min-height: 700px;
 }
+@media (max-width: 449px) {
+  .first {
+    min-height: 400px;
+  }
+}
 .first__item {
   width: 100%;
   min-height: 425px;
@@ -299,4 +304,9 @@ section {
 }
 .footer__css {
   line-height: 20px;
+}
+@media (max-width: 449px) {
+  .footer__phone {
+    text-align: center;
+  }
 }

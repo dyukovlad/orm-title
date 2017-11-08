@@ -266,6 +266,10 @@ section{
 .first{
 	min-height: 700px;
 
+	@media (max-width: 449px) {
+		min-height: 400px;		
+	}
+
 	&__item{
 		width: 100%;
 		min-height: 425px;
@@ -337,6 +341,12 @@ section{
 	
 	&__css{
 		line-height: 20px;
+	}
+
+	&__phone{
+			@media (max-width: 449px) {
+				text-align: center;
+			}
 	}
 
 }
