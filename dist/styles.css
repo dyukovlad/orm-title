@@ -86,10 +86,11 @@ section {
   letter-spacing: 0.2px;
   font-size: 10px;
 }
+.header .menu-css {
+  margin-top: 10px;
+}
 .header__menu {
   margin: 0;
-  padding: 0;
-  margin-top: 10px;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: justify;
@@ -108,14 +109,16 @@ section {
 .header__menu li a:hover {
   border-bottom: 3px solid #fff;
 }
+.header .phone-css {
+  line-height: 33px;
+}
 .header__phone {
   display: block;
   color: #ffffff;
   font-size: 14px;
   font-weight: 700;
   letter-spacing: 1.4px;
-  line-height: 33px;
-  float: right;
+  text-align: right;
 }
 .header__phone:hover {
   color: #ffffff;
@@ -131,18 +134,19 @@ section {
   font-size: 22px;
   font-weight: 300;
 }
-.header .red-line {
+.red-line {
   display: inline-block;
   position: relative;
 }
-.header .red-line strong {
+.red-line strong {
   position: relative;
   z-index: 99;
 }
-.header .red-line span {
+.red-line span {
   position: absolute;
   right: 0;
   bottom: 0;
+  margin-bottom: 6px;
   z-index: 1;
   display: inline-block;
   max-width: 210px;
@@ -220,4 +224,79 @@ section {
     margin: 15px auto;
     display: block;
   }
+}
+.first {
+  min-height: 700px;
+}
+.first__item {
+  width: 100%;
+  min-height: 425px;
+  border-radius: 2px;
+  background-color: #ffdd2d;
+  margin-top: -50px;
+  padding-top: 100px;
+  text-align: center;
+}
+@media (min-width: 450px) and (max-width: 767px) {
+  .first__item {
+    padding-top: 70px;
+  }
+}
+@media (max-width: 449px) {
+  .first__item {
+    padding-top: 50px;
+    min-height: 300px;
+  }
+}
+.first__title {
+  color: #2f2f2f;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 30px;
+  padding: 0 90px;
+}
+@media (min-width: 450px) and (max-width: 767px) {
+  .first__title {
+    padding: 0 20px;
+  }
+}
+@media (max-width: 449px) {
+  .first__title {
+    font-size: 17px;
+    line-height: 20px;
+    padding: 0 10px;
+  }
+}
+.first__img {
+  position: absolute;
+  margin-top: 55px;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 824px;
+  width: 100%;
+}
+.first__img img {
+  width: 100%;
+}
+.second {
+  background: url(../src/img/footer.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: rgba(22, 22, 22, 0.5);
+  background-blend-mode: overlay;
+  padding: 200px 0;
+}
+.second__btn {
+  margin-top: 40px;
+  text-transform: uppercase;
+}
+.footer {
+  padding: 20px 0;
+  background-color: #222222;
+}
+.footer__css {
+  line-height: 20px;
 }
