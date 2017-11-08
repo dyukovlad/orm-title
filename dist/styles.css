@@ -365,7 +365,8 @@ section {
 .case__ico {
   margin-right: 30px;
 }
-.case__name {
+.case__name,
+.case li {
   color: #000000;
   font-size: 16px;
   font-weight: 300;
@@ -382,6 +383,9 @@ section {
 .case__bord-r {
   padding-left: 30px;
   border-left: 3px solid #fd4444;
+}
+.case__main li {
+  margin-bottom: 25px;
 }
 .txt {
   color: #000000;
