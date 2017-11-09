@@ -122,6 +122,11 @@ section {
 .header__phone:hover {
   color: #ffffff;
 }
+.header__city {
+  text-align: right;
+  font-size: 14px;
+  font-weight: 700;
+}
 .header__title {
   font-size: 24px;
   font-weight: 700;
@@ -134,7 +139,7 @@ section {
   font-weight: 300;
 }
 .phone-css {
-  line-height: 33px;
+  line-height: 17px;
 }
 .menu-css {
   margin-top: 10px;
@@ -185,7 +190,7 @@ section {
 .form label {
   position: absolute;
   top: 0;
-  left: 20px;
+  left: 40px;
   transition: all 0.3s;
   opacity: 1;
   padding: 0 5px;
@@ -193,6 +198,7 @@ section {
   text-transform: uppercase;
   font-weight: 300;
   z-index: 1;
+  font-size: 9px;
 }
 .form__input {
   position: relative;
@@ -212,7 +218,7 @@ section {
 }
 .form__input:placeholder-shown + label {
   opacity: 0;
-  left: 30px;
+  left: 40px;
   transform: translateY(100%);
 }
 .form__context {
@@ -412,6 +418,16 @@ section {
   border: none;
   padding: 15px;
 }
+@media (max-width: 449px) {
+  .case .table > tbody > tr > td,
+  .case .table > tbody > tr > th,
+  .case .table > tfoot > tr > td,
+  .case .table > tfoot > tr > th,
+  .case .table > thead > tr > td,
+  .case .table > thead > tr > th {
+    padding: 10px;
+  }
+}
 .case .table > tbody > tr > td:first-child,
 .case .table > tbody > tr > th:first-child,
 .case .table > tfoot > tr > td:first-child,
@@ -420,6 +436,16 @@ section {
 .case .table > thead > tr > th:first-child {
   text-align: left;
   padding-left: 60px;
+}
+@media (max-width: 449px) {
+  .case .table > tbody > tr > td:first-child,
+  .case .table > tbody > tr > th:first-child,
+  .case .table > tfoot > tr > td:first-child,
+  .case .table > tfoot > tr > th:first-child,
+  .case .table > thead > tr > td:first-child,
+  .case .table > thead > tr > th:first-child {
+    padding-left: 10px;
+  }
 }
 .case__table {
   margin-top: 55px;
@@ -437,6 +463,22 @@ section {
   font-weight: 300;
   text-align: center;
 }
+@media (min-width: 450px) and (max-width: 767px) {
+  .case__table tr td {
+    font-size: 15px;
+  }
+}
+@media (max-width: 449px) {
+  .case__table tr td {
+    font-size: 12px;
+  }
+}
+@media (max-width: 449px) {
+  .case__table .txt {
+    font-size: 10px;
+    text-align: center;
+  }
+}
 .case__btn {
   max-width: 220px;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
@@ -453,11 +495,21 @@ section {
   color: #ffdd2d;
   border: 1px solid transparent;
 }
+@media (min-width: 450px) and (max-width: 767px) {
+  .case__cont {
+    text-align: center;
+    font-size: 14px;
+    margin-top: 15px;
+  }
+}
 .txt {
   color: #000000;
   font-size: 16px;
   font-weight: 300;
   line-height: 30px;
+}
+.m0 {
+  margin: 0;
 }
 .footer {
   padding: 20px 0;

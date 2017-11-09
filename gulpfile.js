@@ -16,7 +16,7 @@ var gulp = require('gulp'),
 	path = require('path'),
 	changed = require('gulp-changed'),
 	watch = require('gulp-watch'),
-	chmod = require('gulp-chmod');
+	connect = require('gulp-connect-php');
 
 var paths = {
 	css: './src/css/**/*.css',
@@ -49,7 +49,6 @@ gulp.task('cssConcat', gulp.series(function(done) {
 		.pipe(rename({
 			suffix: '.min'
 		}))
-		.pipe(chmod(755))
 		.pipe(gulp.dest('./dist/lib/'))
 		.pipe(filesize())
 		.pipe(plumber.stop())
@@ -61,7 +60,6 @@ gulp.task('cssConcat', gulp.series(function(done) {
 gulp.task('cssMin', function () {
 	gulp.src(paths.css)
 		.pipe(plumber())
-		.pipe(chmod(755))
 		.pipe(filesize())
 		.pipe(cssmin())
 		.pipe(rename({suffix: '.min'}))
@@ -78,7 +76,6 @@ gulp.task('cssMin', function () {
 // 		.pipe(autoprefixer({
 // 			browsers: ['last 2 versions']
 // 		}))
-// 		.pipe(chmod(755))
 // 		.pipe(gulp.dest('./dist/', {
 // 			overwrite:true
 // 		}))
@@ -92,7 +89,6 @@ gulp.task('less', gulp.series(function(done) {
 		.pipe(autoprefixer({
 			browsers: ['last 2 versions']
 		}))
-		.pipe(chmod(755))
 		.pipe(concat('styles.css'))
 		.pipe(gulp.dest('./dist/', {
 			overwrite:true
@@ -109,7 +105,6 @@ gulp.task('compress', gulp.series(function(done) {
 		.pipe(uglify())
 		.pipe(concat('all.js')) //объединение
 		.pipe(rename({suffix: '.min'}))
-		.pipe(chmod(755))
 		.pipe(gulp.dest('./dist/lib/'))
 		.pipe(plumber.stop())
 		.pipe(browserSync.stream());

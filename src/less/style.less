@@ -138,6 +138,12 @@ section{
 		}
     }
 
+    &__city{
+    	text-align: right;
+		font-size: 14px;
+		font-weight: 700;
+    }
+
     &__title{
 		font-size: 24px;
 		font-weight: 700;
@@ -155,7 +161,7 @@ section{
 }
 
 .phone-css{
-	line-height: 33px;
+	line-height: 17px;
 }
 .menu-css{
 	margin-top: 10px;
@@ -217,7 +223,7 @@ section{
 	label{
 		position: absolute;
 		top:0;
-		left: 20px;
+		left: 40px;
 		transition: all 0.3s;
 		opacity:1;
 		padding:0 5px;
@@ -225,6 +231,7 @@ section{
 		text-transform: uppercase;
 		font-weight: 300;
 		z-index: 1;
+		font-size: 9px;
 	}
 
 	&__input{
@@ -245,7 +252,7 @@ section{
 
 			&:placeholder-shown + label{
 				opacity: 0;
-				left: 30px;
+				left: 40px;
 				transform: translateY(100%);
 			}
 	}
@@ -456,10 +463,17 @@ section{
 	.table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th{
 		border: none;
 		padding:15px;
+			@media (max-width: 449px) {
+				padding:10px;
+			}
 
 		&:first-child{
 			text-align: left;
 			padding-left: 60px;
+
+			@media (max-width: 449px) {
+				padding-left: 10px;
+			}
 		}
 	}
 
@@ -479,8 +493,22 @@ section{
 				font-size: 16px;
 				font-weight: 300;
 				text-align: center;	
+
+					@media (min-width: 450px) and (max-width: 767px){
+						font-size: 15px;
+					}
+					@media (max-width: 449px) {
+						font-size: 12px;
+					}
 			}
 		}
+
+		.txt{
+			@media (max-width: 449px) {
+				font-size: 10px;
+				text-align: center;
+			}
+		}		
 	}
 
 	&__btn{
@@ -500,6 +528,14 @@ section{
 		}
 	}
 
+	&__cont{
+		@media (min-width: 450px) and (max-width: 767px){
+			text-align: center;
+			font-size: 14px;
+			margin-top: 15px;
+		}
+	}
+
 }
 
 .txt{
@@ -509,6 +545,9 @@ section{
 	line-height: 30px;
 }
 
+.m0{
+	margin: 0;
+}
 
 //------------------------//
 
